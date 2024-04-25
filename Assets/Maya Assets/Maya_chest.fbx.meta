@@ -1,29 +1,14 @@
 fileFormatVersion: 2
-guid: 941838afbba30704295d964c30e77377
+guid: 6aa3820ca02529a448d6d14e6bbd6012
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal1
-    second: {fileID: 2100000, guid: 8232e2d50715eb54889d4cf25bf61e80, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: b248b50578914af4eb184638acc4257f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: 2100000, guid: aaa36c849678e354eb5c852860a08780, type: 2}
-  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Chest Top
-    second: {fileID: 2800000, guid: bb8384d08b2130c47aac658c3d66d5b3, type: 3}
+    second: {fileID: 2800000, guid: c6aee71612df50249b6c87c49e1d28b8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
