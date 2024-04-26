@@ -36,7 +36,11 @@ public class ChestAnimation : MonoBehaviour
                     animator.ResetTrigger("OpenTrigger");
                 }
             }
-        }       
+        }
+        else if(InTriggerRange == false)
+        {
+            animator.ResetTrigger("OpenTrigger");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,6 +50,16 @@ public class ChestAnimation : MonoBehaviour
 
             print("Inside");
             InTriggerRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+
+            print("Outsidee");
+            InTriggerRange = false;
         }
     }
 }
