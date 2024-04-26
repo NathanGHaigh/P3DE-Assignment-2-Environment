@@ -613,6 +613,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1247993726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247993723}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29578266, y: 0.0683027, z: 0.17447136}
+  m_Center: {x: -0.0044616535, y: 0.035204206, z: 0.016062299}
+--- !u!114 &1247993727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247993723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c393559f349d44a80f600631fa1126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1247993725}
 --- !u!4 &1250051634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
@@ -829,6 +863,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48b4c74a360535943a5d22708c85f448, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1247993725}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48b4c74a360535943a5d22708c85f448, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247993727}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48b4c74a360535943a5d22708c85f448, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247993726}
     - targetCorrespondingSourceObject: {fileID: -4639708937875366868, guid: 48b4c74a360535943a5d22708c85f448, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1458254210}
