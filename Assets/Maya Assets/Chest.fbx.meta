@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 941838afbba30704295d964c30e77377
+guid: 48b4c74a360535943a5d22708c85f448
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Chest Top
-    second: {fileID: 2800000, guid: bb8384d08b2130c47aac658c3d66d5b3, type: 3}
+    second: {fileID: 2800000, guid: f6b726473691a774a80c2aac2718654d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
