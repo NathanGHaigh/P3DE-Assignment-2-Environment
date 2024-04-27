@@ -23,12 +23,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bottle2
-    second: {fileID: 2800000, guid: 2cdbe96283fdda4438a1c09f3794dcd5, type: 3}
+    second: {fileID: 2800000, guid: 792cd2fb95e68e840b50d301207d26d8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Cork
-    second: {fileID: 2800000, guid: 097207d595d832948ae533f6ecb662ec, type: 3}
+    second: {fileID: 2800000, guid: 45e4897e021eb4643a76faecafacd23f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

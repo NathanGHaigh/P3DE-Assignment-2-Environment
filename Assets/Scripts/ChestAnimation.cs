@@ -60,6 +60,7 @@ public class ChestAnimation : MonoBehaviour
 
             print("Outsidee");
             InTriggerRange = false;
+            open = false;
         }
     }
 }
