@@ -228,6 +228,20 @@ namespace StarterAssets
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
+            if(Grounded && _speed == 0)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    print("Drinking");
+                    _animator.SetTrigger("Drinking");
+                    _speed = 0;
+                }
+            }
+            else if(_speed > 0)
+            {
+                _animator.ResetTrigger("Drinking");
+            }
+
             // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
