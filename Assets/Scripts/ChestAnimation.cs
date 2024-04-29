@@ -23,7 +23,6 @@ public class ChestAnimation : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && open == false)
             {
                 open = true;
-                print("Hello");
                 animator.SetTrigger("OpenTrigger");
             }
 
@@ -32,7 +31,6 @@ public class ChestAnimation : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     open = false;
-                    print("Closing");
                     animator.ResetTrigger("OpenTrigger");
                 }
             }
@@ -47,8 +45,6 @@ public class ChestAnimation : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
-            print("Inside");
             InTriggerRange = true;
         }
     }
@@ -57,8 +53,6 @@ public class ChestAnimation : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
-            print("Outsidee");
             InTriggerRange = false;
             open = false;
         }
