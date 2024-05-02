@@ -1,4 +1,6 @@
-﻿ using UnityEngine;
+﻿using JetBrains.Annotations;
+using Unity.VisualScripting;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -14,6 +16,8 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        public GameObject bottle;
+        bool candrink = false;
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -134,6 +138,7 @@ namespace StarterAssets
 
         private void Start()
         {
+            bottle.SetActive(false);
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
@@ -150,15 +155,26 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
         }
 
-        private void Update()
+        void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+            if (GameObject.Find("Eve By J.Gonzales@Angry").GetComponent<JobCheck>().canDrink == true)
+            {
+                candrink = true;
+                if(candrink) 
+                {
+                    bottle.SetActive(true);
+                    Drinking(); 
+                }
+            }
         }
 
         private void LateUpdate()
@@ -227,21 +243,7 @@ namespace StarterAssets
 
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
-
-            if(Grounded && _speed == 0)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    print("Drinking");
-                    _animator.SetTrigger("Drinking");
-                    _speed = 0;
-                }
-            }
-            else if(_speed > 0)
-            {
-                _animator.ResetTrigger("Drinking");
-            }
-
+        
             // accelerate or decelerate to target speed
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
@@ -360,6 +362,24 @@ namespace StarterAssets
             {
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
+        }
+
+        private void Drinking()
+        {
+                if (Grounded && _speed == 0)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        print("Drinking");
+                        _animator.SetTrigger("Drinking");
+                        _speed = 0;
+                    }
+                }
+
+                else if (_speed > 0)
+                {
+                    _animator.ResetTrigger("Drinking");
+                }
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
