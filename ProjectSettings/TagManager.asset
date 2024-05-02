@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - Water
+  - Pineapple
+  - Drink
   layers:
   - Default
   - TransparentFX
